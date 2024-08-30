@@ -1,0 +1,105 @@
+/* Estilos básicos */
+* {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 280px;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+}
+
+.button-cta {
+    height: 40px;
+    background-color: rgb(220, 20, 20);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.button-cta:hover {
+    background-color: rgb(176, 11, 11);
+    transition: all 0.3s ease-in-out;
+}
+
+.sect-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    min-height: 600px; /* Garante altura suficiente */
+    background-color: #1d1d1deb;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Permite posicionar o formulário corretamente */
+}
+
+.div-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+h1 {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+p {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #cbcbcb;
+    text-align: center;
+    margin: 0;
+}
+
+video, canvas {
+    display: none; /* Oculta o vídeo e o canvas, se não forem usados */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; /* Ajusta a largura dos campos de texto */
+}
+
+

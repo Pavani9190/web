@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senha">
+    <title>PassSchool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sect-login">
+        <img class="logo" src="./logo.png" alt="Gerador de senha logo" />
+        <div class="div-login">
+            <h1>Login</h1>
+            <p>Bem-vindo ao PassSchool! Faça seu cadastro abaixo:</p>
+            <button class="button-cta">Iniciar Câmera</button>
+            <video id="video" width="300" height="300" autoplay></video>
+            <canvas id="canvas" width="300" height="300"></canvas>
+            <pre id="result"></pre>
+            <!-- Formulário de cadastro incluído dentro do mesmo bloco -->
+            <form id="cadastroForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <br>
+                <label for="serie">Série:</label>
+                <input type="text" id="serie" name="serie" required>
+                <br>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.button-cta').addEventListener('click', function() {
+            const nome = document.getElementById('nome').value;
+            const serie = document.getElementById('serie').value;
+
+            if (!nome || !serie) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } })
+                .then(stream => {
+                    const video = document.getElementById('video');
+                    const canvas = document.getElementById('canvas');
+                    const context = canvas.getContext('2d');
+
+                    video.srcObject = stream;
+                    video.style.display = 'block';
+                    canvas.style.display = 'none'; // O canvas permanece oculto até a captura
+
+                    setTimeout(() => {
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+
+                        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                        const dataUrl = canvas.toDataURL('image/jpeg');
+                        const data = dataUrl.replace(/^data:image\/jpeg;base64,/, '');
+
+                        fetch('http://localhost:5500/recognize', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/octet-stream'
+                            },
+                            body: atob(data) // Decodificar base64 para binário
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+                        })
+                        .catch(error => {
+                            console.error('Erro:', error);
+                        });
+
+                        stream.getTracks().forEach(track => track.stop());
+                        video.style.display = 'none';
+                        canvas.style.display = 'none';
+
+                        // Criar e enviar um formulário GET com os dados para a página de credenciais
+                        const queryParams = new URLSearchParams({
+                            name: nome,
+                            email: `${nome.toLowerCase().replace(/\s+/g, '.')}@portalsesisp.com`,
+                            Senha: 'XXXXXX',
+                            RM: 'XXXX'
+                        }).toString();
+
+                        window.location.href = `teste.html?${queryParams}`;
+
+                    }, 5000); // Esperar 5 segundos antes de capturar
+                })
+                .catch(error => {
+                    console.error('Erro ao acessar a câmera:', error);
+                });
+        });
+    </script>
+</body>
+</html>
