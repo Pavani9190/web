@@ -43,10 +43,6 @@ Este projeto é um protótipo de sistema de login automatizado que utiliza recon
 - Autenticação segura com hash de senhas
 - Versão mobile com autenticação via câmera do celular
 
-## 📷 Prévia
-
-*(Você pode adicionar aqui prints ou GIFs da interface e do processo de login)*
-
 ## 👨‍💻 Autor
 
 - Gustavo Pavani  
