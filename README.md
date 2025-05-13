@@ -9,7 +9,6 @@
   <img src="https://img.shields.io/github/languages/count/Pavani9190/web" alt="Languages">
   <img src="https://img.shields.io/github/last-commit/Pavani9190/web" alt="Last Commit">
 </p>
-
 ---
 
 ## 🧠 Sobre o Projeto
@@ -17,7 +16,6 @@
 Este projeto é um **protótipo de sistema de login automatizado com reconhecimento facial**, desenvolvido com o objetivo de testar soluções inovadoras para autenticação de usuários na web. Ao abrir a página, a câmera do dispositivo é ativada automaticamente. Quando a face é reconhecida, o sistema redireciona para uma área segura com os dados do usuário (e-mail, RM e senha).
 
 ---
-
 ## 🚀 Funcionalidades
 
 ✔️ Abertura automática da câmera  
@@ -26,7 +24,6 @@ Este projeto é um **protótipo de sistema de login automatizado com reconhecime
 ❌ *Sem autenticação real ou banco de dados por enquanto*
 
 ---
-
 ## 🧰 Tecnologias Utilizadas
 
 | Front-End | Back-End | Automação |
@@ -36,26 +33,12 @@ Este projeto é um **protótipo de sistema de login automatizado com reconhecime
 | JavaScript | -       | -         |
 
 ---
-
-## 🖥️ Como Executar Localmente
-
-
-# 1. Clone o repositório
-git clone https://github.com/Pavani9190/web.git
-
-# 2. Acesse a pasta do projeto
-cd web
-
-# 3. Abra o arquivo index.html no navegador
 📌 O projeto roda diretamente no navegador. Não é necessário instalar dependências.
 
 💡 Próximos Passos
 🔄 Integração com banco de dados MySQL
-
 🧠 Treinamento com OpenCV e autenticação real
-
 🔐 Hash de senhas e segurança aprimorada
-
 📱 Compatibilidade com dispositivos móveis
 
 👨‍💻 Autor
