@@ -36,9 +36,13 @@ Este projeto é um **protótipo de sistema de login automatizado com reconhecime
 📌 O projeto roda diretamente no navegador. Não é necessário instalar dependências.
 
 💡 Próximos Passos
+
 🔄 Integração com banco de dados MySQL
+
 🧠 Treinamento com OpenCV e autenticação real
+
 🔐 Hash de senhas e segurança aprimorada
+
 📱 Compatibilidade com dispositivos móveis
 
 👨‍💻 Autor
