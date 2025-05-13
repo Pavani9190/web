@@ -1,49 +1,70 @@
-# 🔐 Login com Reconhecimento Facial
+<h1 align="center">🔐 Login com Reconhecimento Facial</h1>
 
-Este projeto é um protótipo de sistema de login automatizado que utiliza reconhecimento facial como diferencial. Desenvolvido como uma solução inovadora para autenticação de usuários, o site abre a câmera do dispositivo e, ao identificar a face, redireciona o usuário para uma página contendo seus dados (e-mail, RM e senha).
+<p align="center">
+  Sistema de autenticação facial via navegador, utilizando tecnologias web e automação em Python.
+</p>
 
-## 🧠 Funcionalidades
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Protótipo-blue" alt="Status">
+  <img src="https://img.shields.io/github/languages/count/Pavani9190/web" alt="Languages">
+  <img src="https://img.shields.io/github/last-commit/Pavani9190/web" alt="Last Commit">
+</p>
 
-- Abertura automática da câmera
-- Reconhecimento facial simples (sem banco de dados)
-- Redirecionamento para área do usuário com informações pessoais
-- Interface web responsiva
+---
 
-## ⚙️ Tecnologias Utilizadas
+## 🧠 Sobre o Projeto
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Python** (para lógica de automação e possível uso de bibliotecas de visão computacional)
+Este projeto é um **protótipo de sistema de login automatizado com reconhecimento facial**, desenvolvido com o objetivo de testar soluções inovadoras para autenticação de usuários na web. Ao abrir a página, a câmera do dispositivo é ativada automaticamente. Quando a face é reconhecida, o sistema redireciona para uma área segura com os dados do usuário (e-mail, RM e senha).
 
-## 🚫 Limitações
+---
 
-> Este projeto ainda **não implementa um banco de dados** para armazenar rostos reconhecidos, por isso não possui autenticação real com persistência de dados. A automação da câmera e o redirecionamento foram concluídos com sucesso.
+## 🚀 Funcionalidades
 
-## 🚀 Como Executar
+✔️ Abertura automática da câmera  
+✔️ Reconhecimento facial simples com redirecionamento  
+✔️ Interface web responsiva  
+❌ *Sem autenticação real ou banco de dados por enquanto*
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Pavani9190/web.git
-   ```
+---
 
-2. Acesse a pasta do projeto:
-   ```bash
-   cd web
-   ```
+## 🧰 Tecnologias Utilizadas
 
-3. Abra o arquivo `index.html` no seu navegador.
+| Front-End | Back-End | Automação |
+|-----------|----------|-----------|
+| HTML5     | -        | Python    |
+| CSS3      | -        | -         |
+| JavaScript | -       | -         |
 
-> Nenhuma instalação de dependências é necessária. Tudo roda direto no navegador!
+---
 
-## 💡 Ideias Futuras
+## 🖥️ Como Executar Localmente
 
-- Integração com banco de dados para armazenar rostos e dados de usuários
-- Treinamento de modelo de reconhecimento facial com OpenCV
-- Autenticação segura com hash de senhas
-- Versão mobile com autenticação via câmera do celular
 
-## 👨‍💻 Autor
+# 1. Clone o repositório
+git clone https://github.com/Pavani9190/web.git
 
-- Gustavo Pavani  
-- [GitHub](https://github.com/Pavani9190)
+# 2. Acesse a pasta do projeto
+cd web
+
+# 3. Abra o arquivo index.html no navegador
+📌 O projeto roda diretamente no navegador. Não é necessário instalar dependências.
+
+💡 Próximos Passos
+🔄 Integração com banco de dados MySQL
+
+🧠 Treinamento com OpenCV e autenticação real
+
+🔐 Hash de senhas e segurança aprimorada
+
+📱 Compatibilidade com dispositivos móveis
+
+👨‍💻 Autor
+Gustavo Pavani
+Técnico em Desenvolvimento de Sistemas (SENAI-SP)
+LinkedIn | GitHub | gutopavani439@gmail.com
+
+⚖️ Licença
+Este projeto é de uso livre para fins educacionais e de aprendizado.
+Sinta-se à vontade para usar como base ou aprimorar.
+
+<p align="center"> Feito com 💻, ☕ e reconhecimento de quem busca ir além. </p> 
